@@ -43,11 +43,9 @@ router.get("/scrape", function(req, res) {
       result.title = $(this)
         .children("a")
         .text();
-      result.link =
-        "https://www.theringer.com/" +
-        $(this)
-          .children("a")
-          .attr("href");
+        result.link = $(this)
+        .children("a")
+        .attr("href");
 
       var entry = new Article(result);
 

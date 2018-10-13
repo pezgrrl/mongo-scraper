@@ -16,8 +16,6 @@ var router = express.Router();
 
 require("./routes/routes")(router);
 
-app.use(express.static(__dirname + "/public"));
-
 app.use(logger("dev"));
 app.use(express.urlencoded({ 
     extended: false 
